@@ -1,4 +1,4 @@
-package org.Ejercicio2.adt;
+package Ejercicio2.adt;
 
 import java.util.LinkedList;
 import java.util.NoSuchElementException;

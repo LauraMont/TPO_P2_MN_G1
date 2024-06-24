@@ -1,8 +1,9 @@
-package org.Ejercicio2.adt;
-import java.util.*;
+package Ejercicio2.adt;
+
+import java.util.HashSet;
 
 public class Set<T> {
-    public final HashSet<T> set;
+    private final HashSet<T> set;
 
     public Set() {
         set = new HashSet<>();
@@ -24,11 +25,15 @@ public class Set<T> {
         return set.isEmpty();
     }
 
-    public Set<T> copySet(Set<T> originalSet) {
+    public Set<T> copySet() {
         Set<T> copiedSet = new Set<>();
-        for (T item : originalSet.set) {
+        for (T item : this.set) {
             copiedSet.add(item);
         }
         return copiedSet;
+    }
+
+    public Iterable<T> getElements() {
+        return set;
     }
 }
