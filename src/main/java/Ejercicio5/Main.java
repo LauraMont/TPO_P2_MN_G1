@@ -36,16 +36,18 @@ public class Main {
         double piAproximado = 4.0 * dentroDelCirculo / 1000;
         System.out.println("Aproximación de π: " + piAproximado);
     }
+    //Complejidad computacional : O(n2) + O(n) = O(n2)
     public static DynamicStack ordenarYRemoverDuplicados(DynamicStack pila){
         //ordenamos listado restante
-        DynamicStack pilaOrdenada = ordenarPila(pila);
+        DynamicStack pilaOrdenada = ordenarPila(pila); //O(n2)
         //removemos numeros repetidos y retornar pila final
-        return removerDuplicados(pilaOrdenada);
+        return removerDuplicados(pilaOrdenada); //O(n)
     }
-    public static DynamicStack ordenarPila(DynamicStack pila){ // [9,3,1] -> [1,3,9]
-        DynamicStack input = duplicarPila(pila);
+    //Complejidad computacional: O(n)+O(n)*O(n)=O(n)+O(n2) = O(n2)
+    public static DynamicStack ordenarPila(DynamicStack pila){
+        DynamicStack input = duplicarPila(pila);//O(n)
         DynamicStack tmpStack= new DynamicStack();
-        while(!input.isEmpty()){
+        while(!input.isEmpty()){ //O(n)*O(n)
             int tmp = input.getTop();
             input.remove();
             while(!tmpStack.isEmpty() && tmpStack.getTop()< tmp){
@@ -56,11 +58,12 @@ public class Main {
         }
         return tmpStack;
     }
-    //Supongo que DynamicStack es una pila con elementos ordenados
+    //Complejidad computacional: O(n)
     public static DynamicStack removerDuplicados(DynamicStack s){
         DynamicStack returner = new DynamicStack();
+        //Supongo que s es una pila con elementos ordenados
         int n = 0;
-        while(!s.isEmpty()) {
+        while(!s.isEmpty()) { //O(n)
             n = s.getTop();
             s.remove();
             if (!s.isEmpty() && s.getTop() != n )  {
@@ -70,14 +73,16 @@ public class Main {
         returner.add(n);
         return returner;
     }
+
+    //Complejidad computacional = O(n) + O(n) = O(n)
     public static DynamicStack duplicarPila(DynamicStack pila){
         DynamicStack aux = new DynamicStack();
         DynamicStack copia = new DynamicStack();
-        while(!pila.isEmpty()){
+        while(!pila.isEmpty()){ //O(n)
             aux.add(pila.getTop());
             pila.remove();
         }
-        while(!aux.isEmpty()){
+        while(!aux.isEmpty()){ //O(n)
             copia.add(aux.getTop());
             pila.add(aux.getTop());
             aux.remove();
