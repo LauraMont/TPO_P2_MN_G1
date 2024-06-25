@@ -6,13 +6,16 @@ Este repositorio contiene los ejercicios realizados por el Grupo XX para el Trab
 - Laura Montaño 
 - Manuela Poustis
 - Agustin Torres
-- Lautaro Cárdenas Mancini
-- Joaquin Mosquera
 
 ## Condiciones de Aprobación
 - Tener al menos 5 de los ejercicios en condiciones de aprobación.
 - El código debe estar en GitHub.
 - Se debe indicar quién realizó cada ejercicio para la evaluación individual.
+
+## Ditribucion de ejercicios
+- Agustin Torres: Ejercicio 1, Ejercicio 4 y Ejercicio 7
+- Manuela Poustis: Ejercicio 2, Ejercicio 6 y Ejercicio 7
+- Laura Montaño: Ejercicio 3, Ejercicio 5 y Ejercicio 7
 
 ## Aclaraciones
 - Las buenas prácticas del código suman puntos.
