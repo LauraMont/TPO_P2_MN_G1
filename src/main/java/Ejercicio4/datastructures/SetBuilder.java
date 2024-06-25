@@ -11,6 +11,9 @@ public class SetBuilder<T> {
     }
 
     public SetBuilder<T> add(T element) {
+        if (element == null) {
+            throw new IllegalArgumentException("Element cannot be null");
+        }
         set.add(element);
         return this;
     }
