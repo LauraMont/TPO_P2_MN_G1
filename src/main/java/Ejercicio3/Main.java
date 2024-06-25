@@ -2,9 +2,11 @@ package Ejercicio3;
 
 import Ejercicio3.QueueOfQueue;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+//    1. concatenate: Recibe n instancias de QueueOfQueue y genera una nueva instancia de QueueOfQueue
+//    con todos los elementos de las instancias anteriores manteniendo el orden en que se leyeron los valores de estas instancias.
+//    2. flat: Crear una instancia de Queue a partir de la instancia de QueueOfQueue con los mismos elementos.
+//    3. reverseWithDepth: Invierte la instancia de QueueOfQueue pero también cada Queue dentro de esta
     public static void main(String[] args) {
 
         QueueOfQueue qoq1 = new QueueOfQueue();
@@ -36,15 +38,19 @@ public class Main {
         qoq2.add(q4);
         qoq2.add(q5);
 
-
+        System.out.println("QueueOfQueues1: ");
+        qoq1.printQueues();
+        System.out.println("QueueOfQueues2: ");
+        qoq2.printQueues();
         QueueOfQueue qoq3 = new QueueOfQueue();
 
         qoq3.concatenate(qoq1,qoq2);
-        System.out.println(qoq3);
+        System.out.println("\nQueues concatenadas:");
+        qoq3.printQueues();
         qoq3.reverseWithDepth();
-        System.out.println(qoq3);
-
+        System.out.println("\nQueues revertidas:");
+        qoq3.printQueues();
+        System.out.println("\nQueue plana con elementos de Queue of queues:");
         System.out.println(qoq3.flat());
-
     }
 }

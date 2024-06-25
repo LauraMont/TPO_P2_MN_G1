@@ -1,7 +1,5 @@
 package Ejercicio5;
 
-import org.Ejercicio2.adt.Set;
-
 public class SetMontecarlo {
     private KeyNode first;
     private int count;

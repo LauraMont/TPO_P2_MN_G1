@@ -25,10 +25,10 @@ public class Main {
             conjunto.add(new Coordenada(random.nextFloat(1),random.nextFloat(1)));
         }
 //      5. Llene la estructura Montecarlo con estos elementos y utilícelos para aproximar π.
-        //areaCirculo = PI * R*R -> area1/4 = PI *R*R/4 -> R = 1 : Area/4 = PI/4 -> Area = PI
         int dentroDelCirculo = 0;
         for (int i = 0; i < conjunto.size(); i++) {
             Coordenada coord = conjunto.getCoordenadas(i);
+            //calcular si esta dentro del circulo
             if (Math.pow(coord.getX(), 2) + Math.pow(coord.getY(), 2) <= 1) {
                 dentroDelCirculo++;
             }
