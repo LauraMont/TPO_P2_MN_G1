@@ -18,9 +18,8 @@ public class Main {
         // Obteniendo la traspuesta de la matriz
         QueueOfStacks transposed = MatrixOperations.transpose(matrix);
         System.out.println("Matriz Traspuesta:");
-        for (int i = 0; i < transposed.getSize(); i++) {
-            System.out.println(transposed.getStacks().get(i));
-        }
+        printMatrix(transposed);
+
 
         // Sumando dos matrices
         QueueOfStacks matrix2 = new QueueOfStacks(3);
@@ -30,8 +29,16 @@ public class Main {
 
         QueueOfStacks sumMatrix = MatrixOperations.add(matrix, matrix2);
         System.out.println("Suma de Matrices:");
-        for (int i = 0; i < sumMatrix.getSize(); i++) {
-            System.out.println(sumMatrix.getStacks().get(i));
+        printMatrix(sumMatrix);
+
+    }
+
+    private static void printMatrix(QueueOfStacks matrix) {
+        for (int i = 0; i < matrix.getSize(); i++) {
+            for (int j = 0; j < matrix.getSize(); j++) {
+                System.out.print(matrix.get(i, j) + " ");
+            }
+            System.out.println();
         }
     }
 }

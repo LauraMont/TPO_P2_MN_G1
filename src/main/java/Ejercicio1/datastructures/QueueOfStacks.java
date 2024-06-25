@@ -34,4 +34,11 @@ public class QueueOfStacks {
     public LinkedList<Stack<Integer>> getStacks() {
         return stacks;
     }
+
+    public int get(int stackIndex, int elementIndex) {
+        if (stackIndex < 0 || stackIndex >= size || elementIndex < 0 || elementIndex >= stacks.get(stackIndex).size()) {
+            throw new IndexOutOfBoundsException("Índice fuera de los límites");
+        }
+        return stacks.get(stackIndex).get(elementIndex);
+    }
 }
